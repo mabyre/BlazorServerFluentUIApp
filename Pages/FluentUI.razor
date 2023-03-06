@@ -1,0 +1,79 @@
+﻿@page "/fluentui"
+
+<h4>Default Button</h4>
+<FluentButton>Button</FluentButton>
+
+<h4>Disabled Button</h4>
+<FluentButton Disabled="true">Button</FluentButton>
+
+<h4>Autofocus Button</h4>
+<FluentButton Autofocus="true">Button</FluentButton>
+
+<h4>On Click</h4>
+<p style="padding:15px"><FluentButton @onclick="() => WasClicked()">Click me</FluentButton></p>
+
+<FluentCard Style="padding: 1.5rem; width: 400px; height: 250px; ">
+	<h2>Hello Fluent UI!</h2>
+	<FluentButton 
+		Appearance="@Appearance.Accent"
+		@onclick="() => WasClicked()">Click Me</FluentButton>
+	<p style="padding:15px" role="status">Current count: @currentCount</p>
+</FluentCard>
+
+<div style="padding:15px">
+<FluentButton @ref="ref1" Appearance="Appearance.Filled">A button</FluentButton>
+<FluentButton @ref="ref2" Appearance="Appearance.Filled">Another button</FluentButton>
+<FluentButton @ref="ref3" Appearance="Appearance.Filled">And one more</FluentButton>
+<FluentButton @ref="ref4" Appearance="Appearance.Filled" @onclick=OnClick>Last button</FluentButton>
+</div>
+
+<!-- https://brave-cliff-0c0c93310.azurestaticapps.net/Icon -->
+<div style="display:flex">
+    <FluentButton Appearance="Appearance.Neutral"><FluentIcon Slot="start" Name="@FluentIcons.ArrowSortUp" /> Button with icon in 'start' slot</FluentButton>
+    <FluentButton Appearance="Appearance.Neutral"><FluentIcon Slot="end" Name="@FluentIcons.ArrowSortUp" /> Button with icon in 'end' slot</FluentButton>
+</div>
+
+
+@*<BaseLayerLuminance Value="(float?)0.15">
+	<FluentCard BackReference="@RouteData">
+		<div class="contents">
+			Dark
+			<FluentButton Appearance="Appearance.Accent">Accent</FluentButton>
+			<FluentButton Appearance="Appearance.Stealth">Stealth</FluentButton>
+			<FluentButton Appearance="Appearance.Outline">Outline</FluentButton>
+			<FluentButton Appearance="Appearance.Lightweight">Lightweight</FluentButton>
+		</div>
+	</FluentCard>
+</BaseLayerLuminance>*@
+
+<!-- Accordion -->
+<!-- Does not work because Name="@FluentIcons.Globe" do not exist ! -->
+
+<FluentAccordion ActiveId="@activeId" OnAccordionItemChange="HandleOnAccordionItemChange">
+    <FluentAccordionItem Heading="Panel one">
+        <FluentIcon Slot="start" Name="@FluentIcons.ChevronDoubleLeft" Size="@IconSize.Size20" Color=Color.Neutral />
+        Panel one content, using the 'start' slot for extra header content (in this case an icon)
+    </FluentAccordionItem>
+    <FluentAccordionItem Heading="Panel two">
+        <div slot="end">
+            #end#
+        </div>
+        Panel two content, using the 'end' slot for extra header content (in this case an HTML button)
+    </FluentAccordionItem>
+    <FluentAccordionItem Expanded="true" Heading="Panel three">
+        Panel three content
+    </FluentAccordionItem>
+</FluentAccordion>
+
+<FluentAccordion>
+    <FluentAccordionItem Heading="Panel one" Expanded="true">
+        Panel one content
+    </FluentAccordionItem>
+    <FluentAccordionItem Heading="Panel two">
+        Panel two content
+    </FluentAccordionItem>
+    <FluentAccordionItem Heading="Panel three" Expanded="true">
+        <span slot="heading">Panel three</span>
+        Panel three content
+    </FluentAccordionItem>
+</FluentAccordion>
