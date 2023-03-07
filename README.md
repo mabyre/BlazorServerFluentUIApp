@@ -27,7 +27,7 @@ Using ArrowSortUp it works !
 
 [Find the way to use BootStrap Icons for Blazor](https://github.com/windperson/BlazorBootstrapIconsdDemo)
 
-Using BootStrap Icon for NavMenu don't work !
+Using BootStrap Icon for NavMenu
 
 <img style="margin: 10px" src="Images/2023-03-07_16h45_00.png" alt="TemplateVisualStudio Ribbon transform Icon Image" />
 
