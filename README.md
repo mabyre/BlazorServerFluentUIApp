@@ -37,6 +37,11 @@ Don't work
 
 <img style="margin: 10px" src="Images/2023-03-07_16h49_04.png" alt="TemplateVisualStudio Ribbon transform Icon Image" />
 
+## More work on FluentUI for Blazor
+
+Obviously it's a little bit disapointing, some works some don't
+
+<img style="margin: 10px" src="Images/2023-03-07_17h37_01.png" alt="TemplateVisualStudio Ribbon transform Icon Image" />
 
 
 

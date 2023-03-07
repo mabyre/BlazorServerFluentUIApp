@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Fast.Components.FluentUI.DesignTokens;
 using Microsoft.Fast.Components.FluentUI;
+using Microsoft.VisualBasic;
 
 namespace BlazorServerFluentUIApp.Pages;
 
@@ -67,6 +68,8 @@ public partial class FluentUI : ComponentBase
 
             StateHasChanged();
         }
+
+        await _OnAfterRenderAsync(firstRender);
     }
 
     public async Task OnClick()
@@ -75,5 +78,35 @@ public partial class FluentUI : ComponentBase
         await StrokeWidth.DeleteValueFor(ref4!.Element);
 
         currentCount++;
+    }
+
+    // Colors for integration with specific Microsoft products
+    // -------------------------------------------------------
+
+    private FluentButton? cref1;
+    private FluentButton? cref2;
+    private FluentButton? cref3;
+    private FluentButton? cref4;
+    private FluentButton? cref5;
+    private FluentButton? cref6;
+    private FluentButton? cref7;
+    private FluentButton? cref8;
+
+    protected async Task _OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await AccentBaseColor.SetValueFor(cref1!.Element, "#D83B01".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref2!.Element, "#185ABD".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref3!.Element, "#107C41".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref4!.Element, "#C43E1C".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref5!.Element, "#6264A7".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref6!.Element, "#7719AA".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref7!.Element, "#03787C".ToSwatch());
+            await AccentBaseColor.SetValueFor(cref8!.Element, "#BC1948".ToSwatch());
+
+            StateHasChanged();
+        }
+
     }
 }
