@@ -28,11 +28,25 @@
 </div>
 
 <!-- https://brave-cliff-0c0c93310.azurestaticapps.net/Icon -->
+<!-- ------------------------------------------------------ -->
+<h3>Icones that are in collection: FluentIcons</h3>
+<div style="display:flex">
+    <FluentIcon Name="@FluentIcons.ArrowSortUp" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.ArrowSortDown" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.ChevronDoubleLeft" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.ChevronDoubleRight" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.ChevronLeft" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.ChevronRight" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+    <FluentIcon Name="@FluentIcons.Filter" Size="@IconSize.Size20" Variant="@IconVariant.Regular" Color="@Color.Accent" />
+</div>
+<p>To discover icon's collection juste tape F12 in symbol FluentIcons !??</p>
+<p>The way to add icons ? I don't know...</p>
+
+<!-- Icons in a button -->
 <div style="display:flex">
     <FluentButton Appearance="Appearance.Neutral"><FluentIcon Slot="start" Name="@FluentIcons.ArrowSortUp" /> Button with icon in 'start' slot</FluentButton>
     <FluentButton Appearance="Appearance.Neutral"><FluentIcon Slot="end" Name="@FluentIcons.ArrowSortUp" /> Button with icon in 'end' slot</FluentButton>
 </div>
-
 
 @*<BaseLayerLuminance Value="(float?)0.15">
 	<FluentCard BackReference="@RouteData">
@@ -47,11 +61,13 @@
 </BaseLayerLuminance>*@
 
 <!-- Accordion -->
-<!-- Does not work because Name="@FluentIcons.Globe" do not exist ! -->
 
-<FluentAccordion ActiveId="@activeId" OnAccordionItemChange="HandleOnAccordionItemChange">
+<!-- Does not work because Name="@FluentIcons.Globe" do not exist ! -->
+<!-- https://brave-cliff-0c0c93310.azurestaticapps.net/Accordion -->
+
+@*<FluentAccordion ActiveId="@activeId" OnAccordionItemChange="HandleOnAccordionItemChange">
     <FluentAccordionItem Heading="Panel one">
-        <FluentIcon Slot="start" Name="@FluentIcons.ChevronDoubleLeft" Size="@IconSize.Size20" Color=Color.Neutral />
+        <FluentIcon Slot="start" Name="@FluentIcons.Globe" Size="@IconSize.Size20" Color=Color.Neutral />
         Panel one content, using the 'start' slot for extra header content (in this case an icon)
     </FluentAccordionItem>
     <FluentAccordionItem Heading="Panel two">
@@ -63,7 +79,7 @@
     <FluentAccordionItem Expanded="true" Heading="Panel three">
         Panel three content
     </FluentAccordionItem>
-</FluentAccordion>
+</FluentAccordion>*@
 
 <FluentAccordion>
     <FluentAccordionItem Heading="Panel one" Expanded="true">
