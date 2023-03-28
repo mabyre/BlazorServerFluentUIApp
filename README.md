@@ -1,12 +1,23 @@
-## Fluent UI for Blazor
+## BlazorServer FluentUI App
 
-[Microsoft FluentUI for Blazor](https://brave-cliff-0c0c93310.azurestaticapps.net/)
+An Application in Blazor C# using FluentUI thanks to Nuget
 
-## Big Bug on FluentIcon 
+## Requirements
+
+I started with:
+- Visual Studio 2022 Community
+
+## References
+
+[Microsoft - FluentUI for Blazor](https://brave-cliff-0c0c93310.azurestaticapps.net/)
+
+[ASP.NET C# - FluentUI for Balzor](https://asp-dotnet-csharp.sodevlog.com/2023/02/fluentui-for-blazor.html)
+
+## Big Bug on FluentIcon
 
 While trying to use : FluentAccordion with FluentIcon I add a stinks message :
 
-> ** Warning **
+> **Warning**
 > An unhandled exception occurred while processing the request.
 > ArgumentException: The requested icon (Globe, Size12, Regular) is not available in the collection
 > Microsoft.Fast.Components.FluentUI.FluentIcon.OnParametersSet() in FluentIcon.cs, line 92
